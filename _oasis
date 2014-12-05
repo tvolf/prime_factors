@@ -1,0 +1,19 @@
+OASISFormat: 0.4
+Name:        prime_factors
+Version:     1.0.0
+Synopsis:    Decomposition to prime factors
+Authors:     tvolf
+License:     LGPL-2.1 with OCaml linking exception
+Plugins:     META (0.4), StdFiles (0.4), DevFiles (0.4)
+BuildDepends: num  
+
+Executable "prime_factors.exe"
+  Path:       .
+  BuildTools: ocamlbuild
+  MainIs:     prime_factors.ml
+  CompiledObject: native  
+
+ 
+PostBuildCommand: cp _build/prime_factors.native ./prime_factors.exe
+
+  

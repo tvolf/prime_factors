@@ -1,0 +1,8 @@
+(* OASIS_START *)
+(* DO NOT EDIT (digest: b8bbc51b8f0d0eeb0df3e3318bba1bf5) *)
+
+Authors of prime_factors:
+
+* tvolf
+
+(* OASIS_STOP *)
