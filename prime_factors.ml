@@ -25,9 +25,12 @@ let rec print_list = function
 let _ = ( 
     Printf.printf "Enter positive integer number : %!";
 	let input_int = try 
-					Some (big_int_of_string (input_line stdin)) 
+					 Some (big_int_of_string (input_line stdin)) 
 				  with 
-					Failure "invalid digit" -> None in
+					| Failure "invalid digit" -> None 
+					| Failure "sys_big_int_of_string" -> None 					
+				  in
+					
 	match input_int with 
 		| Some input_i when compare_big_int input_i zero_big_int = 1 ->	
 				let result = calc_primes input_i in print_list result 
